@@ -10,6 +10,8 @@ import SanPham from "./pages/admin/sanpham";
 import AddSanPham from "./pages/admin/sanpham/add";
 import updateSanPham from "./pages/admin/sanpham/update";
 
+// Giỏ hàng
+import CartPage from "./pages/cartPage";
 // dashboard
 import AdminDashboard from "./pages/admin/";
 import HomePage from "./pages/home";
@@ -64,6 +66,8 @@ router.on({
     print(updateDanhMuc,data.id)
 
   },
+
+  "/cart": () => print(CartPage),
 
   "/admin/san-pham": () => print(SanPham),
   "/admin/san-pham/add": () => print(AddSanPham),

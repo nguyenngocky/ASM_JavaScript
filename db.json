@@ -4,7 +4,7 @@
       "id": 1,
       "title": "Bộ One Piece 500 Quiz Book (Tập 1 + Tập 2) - Tặng Kèm Standee PVC Luffy",
       "price": "70000",
-      "img": "http://res.cloudinary.com/deob8p0s0/image/upload/v1645165761/quibbagt4v5tau5xrdty.jpg",
+      "img": "http://res.cloudinary.com/deob8p0s0/image/upload/v1645188550/lj8rtqsiardabofgjgqc.jpg",
       "desc": " One Piece 500 Quiz Book (Tập 1 + Tập 2)\n \n\nTrận chiến kiêu hãnh!! Thử tài fan One Piece bằng 500 câu hỏi siêu thú vị!!\n\nOne Piece 500 Quiz Book là Series tuyển tập những câu hỏi đố cực kì hóc búa, dành cho các Fan yêu mến bộ truyện tranh One Piece!! Sách sẽ được NXB Kim Đồng cho phát hành cùng lúc Vol.1 và Vol.2 trong tháng 6.2021 này!!\n\nCác câu đố vui trong cuốn sách được phân chia thành những chủ đề khác nhau như: Chủ đề về các thành viên băng Hải tặc Mũ Rơm, Thất Vũ hải, Hải quân hay Tứ hoàng... Toàn bộ những chuyến phiêu lưu, trận chiến đình đám trong tác phẩm sẽ trở thành những thử thách đủ sức làm khó những Fan kì cựu nhất!!\n\nVà các Fan mới cũng có thể yên tâm, kèm theo mỗi câu hỏi chính là phần đáp án được lí giải cực kì chi tiết, thông qua đó bạn sẽ nhớ và biết được nhiều hơn về thế giới bao la trong bộ truyện của chúng ta. Điểm số mà bạn nhận được sẽ nói lên mức truy nã của bạn, hãy nhắm tới mục tiêu “Trên-100-triệu” nhé! \n\nĐừng quên chia sẻ cuốn sách này với bạn bè! Vừa tận hưởng niềm vui với bạn bè thân thiết, vừa cạnh tranh nhau nhằm nâng cao số tiền thưởng của bản thân!! Càng đọc đáp án nhiều, sẽ càng “Thông thái” hơn!! Quyết tâm trở thành \"Nhà One Piece học\" nào!!\n\nMỗi tập sách sẽ được đính kèm tranh màu gập ở ngay đầu. Phần bìa áo được ép nhũ lấp lánh, và quan trọng nhất là những bản in đầu của One Piece 500 Quiz Book sẽ được tặng kèm 01 standee Monkey D. Luffy!! Chuyến phiêu lưu trên đại dương xoay quanh One Piece lại bắt đầu rồi đấy!!",
       "nxb": "NXB Kim Đồng",
       "ngayxb": "2022-03-03",
@@ -239,6 +239,13 @@
       "name": "Vivo s23a",
       "role": 0,
       "id": 3
+    },
+    {
+      "email": "abc@gmail.com",
+      "password": "$2a$10$4IZVL7wa0imjkKlpq/6x5OC7L5virnDzeZeKUR61Lo0VUz6sX6Ko2",
+      "name": "abc",
+      "role": 0,
+      "id": 4
     }
   ]
 }

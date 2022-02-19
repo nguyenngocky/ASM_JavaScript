@@ -110,7 +110,7 @@ const NewsDetail = {
 			addToCart({ ...data, quantity: +$("#inputQty").value, total: +$("#inputQty").value * data.price }, () => {
 				toastr.success("Thêm thành công!");
                 setTimeout(function(){
-                    document.location.href = "/#/cart";
+                    document.location.href = "/cart";
                 }, 1000)
 			})
 		})

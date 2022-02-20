@@ -12,6 +12,9 @@ import updateSanPham from "./pages/admin/sanpham/update";
 
 // Giỏ hàng
 import CartPage from "./pages/cartPage";
+import BillPage from "./pages/bill";
+import SuccessPage from "./pages/SuccessPage";
+
 // dashboard
 import AdminDashboard from "./pages/admin/";
 import HomePage from "./pages/home";
@@ -55,11 +58,13 @@ router.on({
   "/about": () => {
     print(AboutPage);
   },
+  // chi tiết sản phẩm
   "/news/:id": ({ data }) => {
     const { id } = data;
     print(NewsDetail, id);
   },
   "/admin/": () => print(AdminDashboard),
+  // danh mục
   "/admin/danh-muc": () => print(AdminPost),
   "/admin/news/add": () => print(AddPost),
   "/admin/danh-muc/:id/update":({data}) => {
@@ -67,8 +72,11 @@ router.on({
 
   },
 
+  // giỏ hàng
   "/cart": () => print(CartPage),
-
+  "/bill": () => print(BillPage),
+  "/success": () => print(SuccessPage),
+  // sản phẩm
   "/admin/san-pham": () => print(SanPham),
   "/admin/san-pham/add": () => print(AddSanPham),
   "/admin/san-pham/:id/update":({data}) => {

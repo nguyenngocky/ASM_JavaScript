@@ -72,7 +72,7 @@ const cartPage = {
 				</table >
 	<div class="thanh-toan text-center my-4">
 		<button type="submit"
-			class="text-white bg-red-500 inline-block rounded font-bold text-2xl px-4 py-3"><a href="/#/checkout">Thanh
+			class="text-white bg-red-500 inline-block rounded font-bold text-2xl px-4 py-3"><a href="/#/bill">Thanh
 				Toán</a></button>
 	</div>
 			</form >

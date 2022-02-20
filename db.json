@@ -13,7 +13,7 @@
       "trang": "300",
       "trongluong": "500",
       "quantity": "10",
-      "id_danhmuc": "1"
+      "danhMucId": 1
     },
     {
       "id": 2,
@@ -28,7 +28,7 @@
       "trang": "116",
       "trongluong": "266",
       "quantity": "20",
-      "id_danhmuc": "1"
+      "danhMucId": 1
     },
     {
       "title": "One Piece Tập 41: Lời Tuyên Chiến (Tái Bản 2020)",
@@ -41,8 +41,8 @@
       "size": "đóng hàng (RxDxC) 11.3 x 17.6 x 2.0 cm",
       "trang": "192",
       "trongluong": "350",
-      "quantity": "5",
-      "id_danhmuc": "1",
+      "quantity": 5,
+      "danhMucId": 1,
       "id": 3
     },
     {
@@ -57,7 +57,7 @@
       "trang": "192",
       "trongluong": "350",
       "quantity": "6",
-      "id_danhmuc": "1",
+      "danhMucId": 1,
       "id": 4
     },
     {
@@ -72,7 +72,7 @@
       "trang": "224",
       "trongluong": "350",
       "quantity": "10",
-      "id_danhmuc": "2",
+      "danhMucId": 2,
       "id": 5
     },
     {
@@ -87,7 +87,7 @@
       "trang": "244",
       "trongluong": "440",
       "quantity": "6",
-      "id_danhmuc": "2",
+      "danhMucId": 2,
       "id": 6
     },
     {
@@ -102,7 +102,7 @@
       "trang": "244",
       "trongluong": "440",
       "quantity": "15",
-      "id_danhmuc": "2",
+      "danhMucId": 2,
       "id": 7
     },
     {
@@ -117,7 +117,7 @@
       "trang": "184",
       "trongluong": "200",
       "quantity": "40",
-      "id_danhmuc": "3",
+      "danhMucId": 3,
       "id": 8
     },
     {
@@ -132,7 +132,7 @@
       "trang": "448",
       "trongluong": "622",
       "quantity": "9",
-      "id_danhmuc": "3",
+      "danhMucId": 3,
       "id": 9
     },
     {
@@ -147,8 +147,8 @@
       "size": "đóng hàng (RxDxC) 13.0 x 18.0 x 1.0 cm",
       "trang": "188",
       "trongluong": "388",
-      "quantity": "5",
-      "id_danhmuc": "1"
+      "quantity": 5,
+      "danhMucId": 4
     },
     {
       "title": "Shin - Cậu Bé Bút Chì - Đặc Biệt Tập 8 (Tái Bản 2021)",
@@ -162,7 +162,7 @@
       "trang": "108",
       "trongluong": "120",
       "quantity": "7",
-      "id_danhmuc": "4",
+      "danhMucId": 4,
       "id": 11
     },
     {
@@ -177,7 +177,7 @@
       "trang": "248",
       "trongluong": "415",
       "quantity": "20",
-      "id_danhmuc": "5",
+      "danhMucId": 5,
       "id": 12
     },
     {
@@ -191,8 +191,8 @@
       "size": "đóng hàng (RxDxC) 11.3 x 17.6 x 2.0 cm",
       "trang": "248",
       "trongluong": "415",
-      "quantity": "4",
-      "id_danhmuc": "5",
+      "quantity": 4,
+      "danhMucId": 5,
       "id": 13
     }
   ],

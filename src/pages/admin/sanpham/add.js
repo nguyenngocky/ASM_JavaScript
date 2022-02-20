@@ -138,7 +138,7 @@ const AddSanPham = {
                     "Content-Type": "application/form-data"
                 }
             })
-
+			const idDanhMuc = document.querySelector('#danhmuc-sp').value
             // call api thêm bài viết
             add({
                 title: document.querySelector('#title-sp').value,
@@ -152,7 +152,7 @@ const AddSanPham = {
                 trang: document.querySelector('#trang-sp').value,
                 trongluong: document.querySelector('#trongluong-sp').value,
                 quantity: document.querySelector('#quantity-sp').value,
-                id_danhmuc: document.querySelector('#danhmuc-sp').value
+                danhMucId: +idDanhMuc
             })
             .then((result) => {
                 toastr.success("Thêm thành công")

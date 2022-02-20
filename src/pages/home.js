@@ -18,7 +18,7 @@ const HomePage = {
 
 
             <div class="news">
-            <h2>a<h2>
+            
                 <div class="grid grid-cols-5 gap-8 w-[82%] mx-auto">
                 
                     ${data.map((post) => `

@@ -1,4 +1,5 @@
 import { get, getAll } from "../api/sanpham";
+import { Relationships } from "../api/danhmuc";
 import { addToCart } from "../utils/cart";
 import Header from '../components/header';
 import Footer from '../components/footer';
@@ -14,6 +15,13 @@ const numberFormat = new Intl.NumberFormat('vi-VN', {
 const NewsDetail = {
     async render(id) {
         const { data } = await get(id);
+        const sameProduct = await Relationships(data.danhMucId)
+		const dataSameProduct = sameProduct.data.sanpham;
+        console.log(sameProduct)
+
+		const data2 = await getAll();
+		const dataProducts = data2.data;
+        // console.log(dataProducts)
         return `
         <div id="header">
                 ${Header.render()}
@@ -90,7 +98,21 @@ const NewsDetail = {
             <div class="bg-white mt-[20px]">
                 <h1 class="ml-[20px] mb-[10px] pt-[10px] font-bold text-[20px]">Sản phẩm cùng loại</h1>
                 <div class="ml-[20px] italic text-slate-500">
-                    
+
+                 <div class="grid grid-cols-4 gap-8 w-[100%] mx-auto">
+                
+                    ${dataSameProduct.map((post) => `
+                        <div class="h-[400px] border p-2 rounded-lg shadow-inner shadow-orange-900 hover:bg-orange-100 hover:drop-shadow-xl
+                        hover:-translate-y-1 hover:scale-100  relative overflow-hidden bg-white">
+                            <a href="/news/${post.id}">
+                                <img class="w-[150px] h-[200px] mx-auto py-4"src="${post.img}" alt="" />
+                            </a>
+                            <h3 class="my-3"><a  href="/news/${post.id}"class="font-semibold text-[15px] text-orange-500 hover:text-red-700">${post.title}</a></h3>
+                            <p class="w-[100%] text-ellipsis text-[13px]">${post.desc}</p>
+                        </div>
+                    `).join("")}
+                </div>
+
                 </div>
             </div>
 

@@ -1,7 +1,6 @@
-import axios from 'axios';
 import Header from '../components/header';
 import Footer from '../components/footer';
-import { decreaseQty, increaseQty, removeItemInCart } from "../utils/cart";
+import { decInQty, removeItemInCart } from "../utils/cart";
 import { reRender } from "../utils/rerender";
 import { $ } from "../utils/selector";
 import toastr from "toastr";
@@ -12,16 +11,16 @@ const numberFormat = new Intl.NumberFormat('vi-VN', {
 });
 
 const cartPage = {
-    render() {
-        let cart = [];
+	render() {
+		let cart = [];
 		if (localStorage.getItem('cart')) {
-		cart = JSON.parse(localStorage.getItem('cart'));
-        }
-        return /* html */`
-        <div id="header">
-                ${Header.render()}
-            </div>
-        <main class="grid grid-cols-8 gap-3 my-2 relative">
+			cart = JSON.parse(localStorage.getItem('cart'));
+		}
+		return /*html*/ ` 
+		<div id="header">
+		${Header.render()}
+	</div>
+			<main class="grid grid-cols-8 gap-3 my-2 relative">
 			<div class="col-span-8">
 			<form action="" id="form-cart">
 				<h2 class="font-bold text-2xl text-center">GIỎ HÀNG</h2>
@@ -40,6 +39,7 @@ const cartPage = {
                         <tr id="sanphamtt">
 							<td class="border border-[#f0f0f0] border-x-[1px] p-4 text-center">
 								<div class="">
+								<button type="button" hidden class="btn quantityProduct"></button>
 									<a href="" class=""><img src="${item.img}" alt="" width="100"
 											class="align-middle inline-block"></a>
 								</div>
@@ -74,22 +74,18 @@ const cartPage = {
 		<button type="submit"
 			class="text-white bg-red-500 inline-block rounded font-bold text-2xl px-4 py-3"><a href="/#/checkout">Thanh
 				Toán</a></button>
-		<button type="submit"
-			class="text-white bg-red-500 inline-block rounded font-bold text-2xl px-4 py-3">Cập
-			Nhật</button>
 	</div>
 			</form >
 		</div >
 			</main >
-
-            <div class="mt-[30px]" id="footer">
+			<div class="mt-[30px]" id="footer">
             ${Footer.render()}
         </div>
-        `
-    },
+`;
+	},
 
     afterRender() {
-		// Header.afterRender();
+		
 		let cart = [];
 		var tongTien = 0;
 		if (localStorage.getItem('cart')) {
@@ -102,28 +98,31 @@ const cartPage = {
 		})
 		renderTongTien.innerHTML = `${numberFormat.format(tongTien)}`;
 
-
-		$(".btn").forEach(btn => {
-			const id = btn.dataset.id;
-			btn.addEventListener('click', function () {
-				removeItemInCart(id, () => {
-					reRender(cartPage, "#app");
-					toastr.success("Bạn đã xóa thành công")
+		if ($(".btn")) {
+			console.log($(".btn"));
+			$(".btn").forEach(btn => {
+				const id = btn.dataset.id;
+				btn.addEventListener('click', function () {
+					removeItemInCart(id, () => {
+						reRender(cartPage, "#content");
+						toastr.success("Bạn đã xóa thành công")
+					})
 				})
 			})
-		})
+		}
 
-		const quantityProduct = $(".quantityProduct");
-		// console.log(quantityProduct.length);
-
-		quantityProduct.forEach((quantity) => {
-			quantity.addEventListener("change", () => {
-				const id = quantity.dataset.id;
-				decreaseQty(id, quantity.value, () => reRender(cartPage, "#app"));
+		if ($(".quantityProduct")) {
+			$(".quantityProduct").forEach((quantity) => {
+				quantity.addEventListener("change", () => {
+					const id = quantity.dataset.id;
+					decInQty(id, quantity.value, () => {
+						reRender(cartPage, "#content")
+						toastr.success("Thêm sản phẩm thành công")
+					});
+				})
 			})
-		})
+		}
 
-		// END
 	}
 };
 export default cartPage;

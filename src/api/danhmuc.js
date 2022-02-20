@@ -21,3 +21,8 @@ export const update = (danhmuc) => {
     const url = `/danhMuc/${danhmuc.id}`;
     return instance.put(url, danhmuc);
 }
+
+export const Relationships = (id) => {
+    const url = `/danhMuc/${id}?_embed=sanpham`;
+    return instance.get(url);
+}

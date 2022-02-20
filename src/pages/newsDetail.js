@@ -102,11 +102,9 @@ const NewsDetail = {
     },
 
     afterRender(id) {
-		// Header.afterRender();
 		const btnAdd = document.querySelector("#btnAddToCart");
 		btnAdd.addEventListener('click', async function () {
             const { data } = await get(id);
-            console.log(data);
 			addToCart({ ...data, quantity: +$("#inputQty").value, total: +$("#inputQty").value * data.price }, () => {
 				toastr.success("Thêm thành công!");
                 setTimeout(function(){

@@ -22,7 +22,8 @@ import NewsDetail from "./pages/newsDetail";
 import Signin from "./pages/signin";
 import Signup from "./pages/signup";
 
-
+// user
+import UserList from "./pages/admin/user";
 
 const router = new Navigo("/", { linksSelector: "a", hash: true });
 
@@ -83,7 +84,8 @@ router.on({
     print(updateSanPham,data.id)
 
   },
-
+  // user
+  "/admin/user": () => print(UserList),
   // đăng nhập đăng ký
   "/signup": () => print(Signup),
   "/signin": () => print(Signin)

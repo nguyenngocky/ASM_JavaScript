@@ -239,13 +239,6 @@
       "name": "Vivo s23a",
       "role": 0,
       "id": 3
-    },
-    {
-      "email": "abc@gmail.com",
-      "password": "$2a$10$4IZVL7wa0imjkKlpq/6x5OC7L5virnDzeZeKUR61Lo0VUz6sX6Ko2",
-      "name": "abc",
-      "role": 0,
-      "id": 4
     }
   ]
 }

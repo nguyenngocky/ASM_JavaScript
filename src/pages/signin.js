@@ -73,7 +73,7 @@ const Signin = {
                 toastr.success("Đăng nhập thành công, chuyển trang sau 2s")
                 setTimeout(function(){
                     if(data.user.role === 1){
-                        document.location.href="/#/admin/"
+                        document.location.href="/#/admin/danh-muc"
                     } else {
                         document.location.href="/#/"
                     }

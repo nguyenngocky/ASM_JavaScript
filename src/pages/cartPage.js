@@ -39,7 +39,7 @@ const cartPage = {
                         <tr id="sanphamtt">
 							<td class="border border-[#f0f0f0] border-x-[1px] p-4 text-center">
 								<div class="">
-								<button type="button" hidden class="btn quantityProduct"></button>
+								<button type="button" disabled class="btn quantityProduct"></button>
 									<a href="" class=""><img src="${item.img}" alt="" width="100"
 											class="align-middle inline-block"></a>
 								</div>

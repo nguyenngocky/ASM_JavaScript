@@ -117,7 +117,6 @@ const cartPage = {
 					const id = quantity.dataset.id;
 					decInQty(id, quantity.value, () => {
 						reRender(cartPage, "#content")
-						toastr.success("Thêm sản phẩm thành công")
 					});
 				})
 			})

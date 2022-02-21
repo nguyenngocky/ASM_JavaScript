@@ -18,12 +18,6 @@ const Dashboard = {
             <a href="/admin/user">Bảng Người Dùng</a>
           </li>
           <li class="inline-block text-base px-[30px] text-[#38383D] font-normal leading-4 font-mono">
-            <a href="/admin/gioi-thieu">Bảng Giới thiệu</a>
-          </li>
-          <li class="inline-block text-base px-[30px] text-[#38383D] font-normal leading-4 font-mono">
-            <a href="/admin/lien-he">Bảng Liên hệ</a>
-          </li>
-          <li class="inline-block text-base px-[30px] text-[#38383D] font-normal leading-4 font-mono">
             <a href="/">Về website</a>
           </li>
         </ul>

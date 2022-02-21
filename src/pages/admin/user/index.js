@@ -13,10 +13,10 @@ const UserList = {
             </div>
         <div class="max-w-5xl mx-auto"> 
             <div class="my-3">
-                <a class="btn edit btn-bs-secondary mr-6 lg:mr-0 lg:mb-6" href="/admin/san-pham/add">Tạo mới</a>
+               
             </div>
             <div class="news">
-                <h2>Quản lý Sản phẩm</h2>
+                <h2>Quản lý Khách hàng</h2>
                 <table class="table-auto w-full text-left">
                 <thead>
                     <tr>

@@ -4,6 +4,8 @@ import { getAll } from "../../../api/danhmuc";
 import Dashboard from '../../../components/dashboard';
 import toastr from "toastr";
 import "toastr/build/toastr.min.css";
+import $ from 'jquery';
+import validate from 'jquery-validation';
 
 const AddSanPham = {
    async render(){
@@ -24,14 +26,14 @@ const AddSanPham = {
 								<div class="grid grid-cols-6 gap-6">
 									<div class="col-span-6 sm:col-span-3">
 										<label for="product-name" class="block text-sm font-medium text-gray-700">Tên truyện</label>
-										<input type="text" name="title-sp" id="title-sp" placeholder="Nhập tên truyện"
+										<input type="text" required name="title-sp" id="title-sp" placeholder="Nhập tên truyện"
 											class="mt-1 py-2 px-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
 									</div>
 
 									<div class="col-span-6 sm:col-span-3">
 										<label for="img-sp"
 											class="block text-sm font-medium text-gray-700">Ảnh</label>
-										<input type="file" name="img-sp" id="img-sp"
+										<input type="file" required name="img-sp" id="img-sp"
 											class="mt-1 py-2 px-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
 									</div>
 
@@ -48,55 +50,55 @@ const AddSanPham = {
 
                                     <div class="col-span-6 sm:col-span-3">
 										<label for="nxb-sp" class="block text-sm font-medium text-gray-700">Nhà xuất bản</label>
-										<input type="text" name="nxb-sp" id="nxb-sp" placeholder="Nhập nhà xuất bản"
+										<input type="text" required name="nxb-sp" id="nxb-sp" placeholder="Nhập nhà xuất bản"
 											class="mt-1 py-2 px-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
 									</div>
 
                                     <div class="col-span-6 sm:col-span-3">
                                     <label for="ngayxb-sp" class="block text-sm font-medium text-gray-700">Ngày xuất bản</label>
-                                    <input type="date" name="ngayxb-sp" id="ngayxb-sp" placeholder="Chọn Ngày xuất bản"
+                                    <input type="date" required name="ngayxb-sp" id="ngayxb-sp" placeholder="Chọn Ngày xuất bản"
                                         class="mt-1 py-2 px-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                                     </div>
 
                                     <div class="col-span-6 sm:col-span-3">
 										<label for="nph-sp" class="block text-sm font-medium text-gray-700">Nhà phát hành</label>
-										<input type="text" name="nph-sp" id="nph-sp" placeholder="Nhập nhà phát hành"
+										<input type="text" required name="nph-sp" id="nph-sp" placeholder="Nhập nhà phát hành"
 											class="mt-1 py-2 px-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
 									</div>
 
                                     <div class="col-span-6 sm:col-span-3">
 										<label for="size-sp" class="block text-sm font-medium text-gray-700">Kích thước</label>
-										<input type="text" name="size-sp" id="size-sp" placeholder="Nhập Kích thước"
+										<input type="text" required name="size-sp" id="size-sp" placeholder="Nhập Kích thước"
 											class="mt-1 py-2 px-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
 									</div>
 
                                     <div class="col-span-6 sm:col-span-3">
 										<label for="trang-sp" class="block text-sm font-medium text-gray-700">Số trang</label>
-										<input type="number" name="trang-sp" id="trang-sp" placeholder="Nhập Số trang"
+										<input type="number" required name="trang-sp" id="trang-sp" placeholder="Nhập Số trang"
 											class="mt-1 py-2 px-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
 									</div>
 
                                     <div class="col-span-6 sm:col-span-3">
 										<label for="trongluong-sp" class="block text-sm font-medium text-gray-700">Trọng lượng</label>
-										<input type="number" name="trongluong-sp" id="trongluong-sp" placeholder="Nhập Trọng lượng"
+										<input type="number" required name="trongluong-sp" id="trongluong-sp" placeholder="Nhập Trọng lượng"
 											class="mt-1 py-2 px-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
 									</div>
 
 									<div class="col-span-6 sm:col-span-4">
-										<label for="desc-sp" class="block text-sm font-medium text-gray-700">giới thiệu truyện</label>
+										<label for="desc-sp" required class="block text-sm font-medium text-gray-700">giới thiệu truyện</label>
 										<textarea type="text" name="desc-sp" id="desc-sp"
 											class="mt-1 py-2 px-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"></textarea>
 									</div>
 									<div class="col-span-6 sm:col-span-3">
 										<label for="price-sp"
 											class="block text-sm font-medium text-gray-700">Giá</label>
-										<input type="number" min="0" name="price-sp" id="price-sp" placeholder="Nhập giá sản phẩm"
+										<input type="number" required min="0" name="price-sp" id="price-sp" placeholder="Nhập giá sản phẩm"
 											class="mt-1 py-2 px-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
 									</div>
 										<div class="col-span-6 sm:col-span-3">
 										<label for="quantity-sp"
 											class="block text-sm font-medium text-gray-700">Số lượng</label>
-										<input type="number" min="0" name="quantity-sp" id="quantity-sp" placeholder="Nhập số lượng"
+										<input type="number" required min="0" name="quantity-sp" id="quantity-sp" placeholder="Nhập số lượng"
 											class="mt-1 py-2 px-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
 									</div>
 

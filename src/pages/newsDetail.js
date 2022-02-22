@@ -1,4 +1,4 @@
-import { get, getAll } from "../api/sanpham";
+import { get } from "../api/sanpham";
 import { Relationships } from "../api/danhmuc";
 import { addToCart } from "../utils/cart";
 import Header from '../components/header';
@@ -17,11 +17,7 @@ const NewsDetail = {
         const { data } = await get(id);
         const sameProduct = await Relationships(data.danhMucId)
 		const dataSameProduct = sameProduct.data.sanpham;
-        console.log(sameProduct)
-
-		const data2 = await getAll();
-		const dataProducts = data2.data;
-        // console.log(dataProducts)
+        // console.log(sameProduct)
         return `
         <div id="header">
                 ${Header.render()}

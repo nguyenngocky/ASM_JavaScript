@@ -3,6 +3,11 @@ import { getAll } from '../api/sanpham';
 import Header from '../components/header';
 import Footer from '../components/footer';
 
+const numberFormat = new Intl.NumberFormat('vi-VN', {
+	style: 'currency',
+	currency: 'VND',
+});
+
 const HomePage = {
     async render() {
         const { data } = await getAll();
@@ -27,6 +32,7 @@ const HomePage = {
                             <a href="/news/${post.id}">
                                 <img class="w-[150px] h-[200px] mx-auto py-4"src="${post.img}" alt="" />
                             </a>
+                            <p class="text-red-900 text-center">${numberFormat.format(post.price)}</p>
                             <h3 class="my-3"><a  href="/news/${post.id}"class="font-semibold text-[15px] text-orange-500 hover:text-red-700">${post.title}</a></h3>
                             <p class="w-[100%] text-ellipsis text-[13px]">${post.desc}</p>
                         </div>

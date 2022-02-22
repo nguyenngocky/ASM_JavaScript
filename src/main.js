@@ -2,6 +2,7 @@ import Navigo from "navigo";
 import Footer from "./components/footer";
 import Header from "./components/header";
 import AboutPage from "./pages/about";
+import gioithieu from "./pages/gioithieu";
 import AdminPost from "./pages/admin/danhmuc";
 import AddPost from "./pages/admin/danhmuc/add";
 import updateDanhMuc from "./pages/admin/danhmuc/update";
@@ -58,6 +59,9 @@ router.on({
   },
   "/about": () => {
     print(AboutPage);
+  },
+  "/gioi-thieu": () => {
+    print(gioithieu);
   },
   // chi tiết sản phẩm
   "/news/:id": ({ data }) => {

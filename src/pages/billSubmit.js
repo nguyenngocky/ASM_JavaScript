@@ -45,7 +45,7 @@ const SuccessPage = {
             document.location.href = "/";
         })
 
-
+        Header.afterRender()
     }
 };
 export default SuccessPage;

@@ -175,6 +175,7 @@ const BillPage = {
 				Order();
 			}
 		});
+		Header.afterRender()
 
 	}
 };

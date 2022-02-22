@@ -37,6 +37,7 @@ const SanPham = {
                     <tbody>
                         ${data.map((post, index) => {
                             const result = dataD.filter(DanhMuc => DanhMuc.id == post.danhMucId) 
+                            console.log(result);
                             return `
                             <tr>
                                 <td class="border border-l-0 px-4 py-2 text-center text-green-500">${index + 1}</td>

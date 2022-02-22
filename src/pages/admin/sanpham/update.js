@@ -164,6 +164,7 @@ const updateSanPham = {
                     imgData = ImgOld.src;
                     console.log("Old",imgData);
                 }
+				const idDanhMuc = document.querySelector('#danhmuc-sp').value
 
                 update({
                     id,
@@ -178,7 +179,7 @@ const updateSanPham = {
                     trang: document.querySelector('#trang-sp').value,
                     trongluong: document.querySelector('#trongluong-sp').value,
                     quantity: document.querySelector('#quantity-sp').value,
-                    id_danhmuc: document.querySelector('#danhmuc-sp').value
+                    danhMucId: +idDanhMuc
                 })
                 .then((result) => {
                     toastr.success("Cập nhật thành công")

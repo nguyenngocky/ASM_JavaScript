@@ -133,7 +133,8 @@ const NewsDetail = {
                     document.location.href = "/cart";
                 }, 1000)
 			})
-		})
+		}),
+        Header.afterRender()
 
 	}
 };

@@ -3,6 +3,7 @@ import Footer from "./components/footer";
 import Header from "./components/header";
 import AboutPage from "./pages/about";
 import gioithieu from "./pages/gioithieu";
+import lienhe from "./pages/lienhe";
 import AdminPost from "./pages/admin/danhmuc";
 import AddPost from "./pages/admin/danhmuc/add";
 import updateDanhMuc from "./pages/admin/danhmuc/update";
@@ -62,6 +63,9 @@ router.on({
   },
   "/gioi-thieu": () => {
     print(gioithieu);
+  },
+  "/lien-he": () => {
+    print(lienhe);
   },
   // chi tiết sản phẩm
   "/news/:id": ({ data }) => {

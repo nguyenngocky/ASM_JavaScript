@@ -25,18 +25,13 @@ const BillPage = {
                     <div class="col-span-8">
 			<div class="grid grid-cols-9">
 				<div class="col-span-5 px-[65px]" id="checkout-left">
-					<h2 class="text-2xl font-bold my-4">Thanh Toán Sản Phẩm</h2>
-					<ul>
-						<li class="inline-block mr-2"><a href="/cart" class="text-[#338dbc] text-sm">Giỏ hàng</a></li>>
-						<li class="inline-block mx-2"><span class="text-sm">Thông tin giao hàng</span></li>>
-						<li class="inline-block mx-2"><span class="text-[#999999] text-sm">Thanh toán</span></li>
-					</ul>
-					<span class="block my-2 text-xl">Thông tin giao hàng</span>
+					<h2 class="text-2xl font-bold my-4 text-red-800">Thanh Toán</h2>
+					<span class="block my-2 text-xl text-blue-800">Thông tin giao hàng</span>
 					${localStorage.getItem('user') ? `` : `<div class="my-2">
 						<span class="text-[#737373]">Bạn đã có tài khoản?</span>
 						<a href="/signin" class="text-[#338dbc]">Đăng nhập</a>
 					</div>`}
-					<form action ="" id="formOrder">
+					<form action ="" id="formOrder" class="text-orange-700">
 						<div class="">
 							<div class="form-group">
 								<label for="" class="block py-2 font-bold text-lg">Họ và tên</label>
@@ -62,9 +57,7 @@ const BillPage = {
 							</div>
 						</div>
 						<div class="text-center my-3">
-							<button class="bg-[#338dbc] text-white py-4 px-5 rounded text-xl ">Tiếp
-								Tục Thanh
-								Toán</button>
+							<button class="bg-[#338dbc] text-white py-4 px-5 rounded text-xl ">Xác nhận</button>
 						</div>
 					</ >
 				</div >

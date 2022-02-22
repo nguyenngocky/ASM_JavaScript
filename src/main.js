@@ -15,7 +15,7 @@ import updateSanPham from "./pages/admin/sanpham/update";
 // Giỏ hàng
 import CartPage from "./pages/cartPage";
 import BillPage from "./pages/bill";
-import SuccessPage from "./pages/SuccessPage";
+import billSubmit from "./pages/billSubmit";
 
 // dashboard
 import AdminDashboard from "./pages/admin/";
@@ -84,7 +84,7 @@ router.on({
   // giỏ hàng
   "/cart": () => print(CartPage),
   "/bill": () => print(BillPage),
-  "/success": () => print(SuccessPage),
+  "/success": () => print(billSubmit),
   // sản phẩm
   "/admin/san-pham": () => print(SanPham),
   "/admin/san-pham/add": () => print(AddSanPham),

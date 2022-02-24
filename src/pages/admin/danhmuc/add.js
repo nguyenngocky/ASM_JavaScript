@@ -15,7 +15,7 @@ const AddDanhMuc = {
             
             <div class="max-w-5xl mx-auto">
             <form action="" id="formAddPost">
-                <input type="text" id="title-danhmuc" required class="title border border-black" placeholder="Title" /><br />
+                <input type="text" id="title-danhmuc" name="title-dm" class="title border border-black" placeholder="Title" /><br />
                 <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-slate-600 hover:slate-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                 Tạo danh mục</button>
             </form>
@@ -28,12 +28,12 @@ const AddDanhMuc = {
         const title = document.querySelector("#title-danhmuc")
         formAddPost.validate({
             rules: {
-				"title": {
+				"title-dm": {
 					required: true,
 				}
             },
             messages: {
-                "title": {
+                "title-dm": {
 					required: "Không được để trống !",
 				}
             },
